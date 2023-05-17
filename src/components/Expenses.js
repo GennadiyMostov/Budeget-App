@@ -1,20 +1,21 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
+import Card from './Card';
 
-function Expenses({ expenses }) {
+function Expenses({ items }) {
   return (
-    <div className='expenses'>
-      {expenses.map((expense) => {
+    <Card className='expenses'>
+      {items.map((expenseData) => {
         return (
           <ExpenseItem
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
+            title={expenseData.title}
+            amount={expenseData.amount}
+            date={expenseData.date}
           />
         );
       })}
-    </div>
+    </Card>
   );
 }
 
