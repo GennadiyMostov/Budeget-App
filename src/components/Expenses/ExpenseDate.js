@@ -1,8 +1,8 @@
-import React from 'react';
 import moment from 'moment';
+import React from 'react';
 import './ExpenseDate.css';
 
-function ExpenseDate({ date }) {
+const ExpenseDate = ({ date }) => {
   const month = moment(date).format('MMM');
   const day = moment(date).format('D');
   const year = moment(date).format('YYYY');
@@ -14,6 +14,6 @@ function ExpenseDate({ date }) {
       <div className='expense-date__year'>{year}</div>
     </div>
   );
-}
+};
 
 export default ExpenseDate;
