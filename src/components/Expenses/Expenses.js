@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import ExpenseFilter from './ExpensesFilter';
@@ -10,14 +10,12 @@ const Expenses = ({ items }) => {
   //Maps Expense Items Data
   const ifExpenseContentTrue = filteredList.map((expenseData) => {
     return (
-      <ul className='expenses-list'>
-        <ExpenseItem
-          key={expenseData.id}
-          title={expenseData.title}
-          amount={expenseData.amount}
-          date={expenseData.date}
-        />
-      </ul>
+      <ExpenseItem
+        key={expenseData.id}
+        title={expenseData.title}
+        amount={expenseData.amount}
+        date={expenseData.date}
+      />
     );
   });
 
