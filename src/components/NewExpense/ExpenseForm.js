@@ -18,6 +18,7 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
 
   //Date
   const dateChangeHandler = (event) => {
+    event.preventDefault();
     setExpenseFormDate(event.target.value);
   };
   // Add Expense
@@ -61,7 +62,7 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
           <label>Date</label>
           <input
             type='date'
-            min='2023-01-01'
+            min='2019-01-01'
             max='2024-12-31'
             value={expenseFormDate}
             onChange={dateChangeHandler}
